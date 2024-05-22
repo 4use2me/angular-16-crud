@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { ActivatedRoute, Route, Router } from '@angular/router';
+import { Subject, takeUntil } from 'rxjs';
+import { CreditCard } from 'src/app/models/credit-card';
+import { CreditcardsService } from 'src/app/services/creditcards.service';
 
 @Component({
   selector: 'app-view',
@@ -7,4 +12,11 @@ import { Component } from '@angular/core';
 })
 export class ViewComponent {
 
+  creditCardDetails!: CreditCard;
+ 
+  constructor(private creditCardsService: CreditcardsService) {
+    this.creditCardsService.getCreditCardById(3).subscribe((data: CreditCard) => {
+      this.creditCardDetails = data;
+    })
+  }
 }
