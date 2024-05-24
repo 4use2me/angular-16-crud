@@ -11,6 +11,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HttpClientModule } from '@angular/common/http';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { MatListModule } from '@angular/material/list';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MatListModule } from '@angular/material/list';
     MatIconModule,
     MatSidenavModule,
     HttpClientModule,
-    MatListModule
+    MatListModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

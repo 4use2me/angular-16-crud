@@ -33,7 +33,7 @@
       <div class="form-group">
         <mat-form-field class="full-width">
           <label>Max Credit</label>
-          <input matInput placeholder="Enter Bank Name" name="maxCredit" [(ngModel)]="newCreditCard.maxCredit" required minlength="3" maxlength="20">
+          <input matInput placeholder="Enter Max Credit" name="maxCredit" [(ngModel)]="newCreditCard.maxCredit" required minlength="3" maxlength="20">
           <mat-error *ngIf="creditCardForm.controls['maxCredit']?.touched && creditCardForm.controls['maxCredit']?.hasError('required')">Max Credit is required</mat-error>
           <mat-error *ngIf="creditCardForm.controls['maxCredit']?.touched && creditCardForm.controls['maxCredit']?.hasError('minlength')">Max Credit must have atleast 3 characters</mat-error>
           <mat-error *ngIf="creditCardForm.controls['maxCredit']?.touched && creditCardForm.controls['maxCredit']?.hasError('maxlength')">Max Credit cannot be more than 20 characters</mat-error>
