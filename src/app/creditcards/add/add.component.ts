@@ -37,4 +37,10 @@ export class AddComponent {
       this.router.navigate(['creditcards']);
     })
   }
+
+  ngOnDestroy() {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
+  }
 }

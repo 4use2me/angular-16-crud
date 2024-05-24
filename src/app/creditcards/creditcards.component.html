@@ -1,13 +1,13 @@
 
 <div class="mat-card" style="display:flex; flex-direction: row;">
   <mat-card class="mat-card count-card bg-success">
-    <mat-card-title>Num of Cards</mat-card-title>
-    <mat-card-content>10</mat-card-content>
+    <mat-card-title>Num of Cards with 3000 Amount</mat-card-title>
+    <mat-card-content>{{creditCardMaximumAmount}}</mat-card-content>
   </mat-card>
 
   <mat-card class="mat-card count-card bg-warning">
-    <mat-card-title>Num of Cards</mat-card-title>
-    <mat-card-content>10</mat-card-content>
+    <mat-card-title>Num of Cards with Interest over 10</mat-card-title>
+    <mat-card-content>{{creditCardMaximumInterest}}</mat-card-content>
   </mat-card>
 
   <mat-card class="mat-card count-card bg-info">
@@ -81,10 +81,11 @@
         </td>
       </ng-container>
 
+
       <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayColumns"></tr>
     </table>
     <mat-paginator [pageSizeOptions]="[5, 10, 15, 20]"
-    showFirstLastButtons></mat-paginator>
+                   showFirstLastButtons></mat-paginator>
   </mat-card-content>
 </mat-card>
